@@ -6,14 +6,14 @@ USE showdomilhao;
 
  
 CREATE TABLE professor(
-	  id_professor INT NOT NULL AUTO_INCREMENT,
+	id_professor INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-	  PRIMARY KEY (id_professor)
+	PRIMARY KEY (id_professor)
 );
 
 CREATE TABLE turma(
-	  id_turma INT NOT NULL,
+	id_turma INT NOT NULL,
     id_professor INT NOT NULL,
     nome VARCHAR(255),
     PRIMARY KEY (id_turma),
@@ -22,7 +22,7 @@ CREATE TABLE turma(
 );
 
 CREATE TABLE aluno(
-	  id_aluno INT NOT NULL AUTO_INCREMENT,
+	id_aluno INT NOT NULL AUTO_INCREMENT,
     id_turma INT NOT NULL,
     nome VARCHAR(255) NOT NULL,
     ra INT NOT NULL,
@@ -32,14 +32,14 @@ CREATE TABLE aluno(
 );
 
 CREATE TABLE pontuacao(
-	  pontuacao INT, 
+	pontuacao INT, 
     id_aluno INT NOT NULL,
     PRIMARY KEY (pontuacao),
     FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
 );
 
 CREATE TABLE ranking(
-	  id_posicao INT NOT NULL AUTO_INCREMENT,
+	id_posicao INT NOT NULL AUTO_INCREMENT,
     id_aluno INT NOT NULL,
     id_turma INT NOT NULL,
     pontuacao INT,
@@ -50,7 +50,7 @@ CREATE TABLE ranking(
 );
 
 CREATE TABLE materia(
-	  id_materia INT NOT NULL AUTO_INCREMENT,
+	id_materia INT NOT NULL AUTO_INCREMENT,
     id_professor INT NOT NULL,
     nome VARCHAR(255) NOT NULL,
     PRIMARY KEY (id_materia), 
@@ -58,16 +58,16 @@ CREATE TABLE materia(
 );
 
 CREATE TABLE pergunta(
-	  id_pergunta INT NOT NULL AUTO_INCREMENT,
+	id_pergunta INT NOT NULL AUTO_INCREMENT,
     id_materia INT NOT NULL,
     enunciado VARCHAR(255) NOT NULL,
     dificuldade VARCHAR(255) NOT NULL,
-	  PRIMARY KEY (id_pergunta),
+	PRIMARY KEY (id_pergunta),
     FOREIGN KEY (id_materia) REFERENCES materia(id_materia)
 );
 
 CREATE TABLE resposta(
-	  id_resposta INT NOT NULL AUTO_INCREMENT,
+	id_resposta INT NOT NULL AUTO_INCREMENT,
     id_pergunta INT NOT NULL, 
     id_materia INT NOT NULL,
     texto VARCHAR(255) NOT NULL,
@@ -79,9 +79,9 @@ CREATE TABLE resposta(
 );
 
 CREATE TABLE pergunta_resposta(
-	  id_pergunta INT NOT NULL,
+	id_pergunta INT NOT NULL,
     id_resposta INT NOT NULL,
     PRIMARY KEY (id_pergunta, id_resposta),
     FOREIGN KEY (id_pergunta) REFERENCES pergunta(id_pergunta),
-	  FOREIGN KEY (id_resposta) REFERENCES resposta(id_resposta) 
+	FOREIGN KEY (id_resposta) REFERENCES resposta(id_resposta) 
 );
