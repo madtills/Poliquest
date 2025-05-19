@@ -1,0 +1,10 @@
+public static void main(String[] args) throws Exception {
+        var fabricaDeConexoes = new ConnectionFactory();
+        //cláusula catch or declare
+        Connection conexao = fabricaDeConexoes.obterConexao();
+        if(conexao != null){
+            System.out.println("Conectou!");
+        }
+        else{
+            System.out.println("Não conectou");
+        }
