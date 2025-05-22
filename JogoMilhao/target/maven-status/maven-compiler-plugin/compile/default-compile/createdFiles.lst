@@ -1,8 +1,10 @@
 com\mycompany\jogomilhao\JogoMilhaoTelaInicial$4.class
 com\mycompany\jogomilhao\JogoMilhaoTelaInicial.class
 com\mycompany\jogomilhao\TelaDasMaterias.class
+com\mycompany\jogomilhao\TelaDeCadastro$3.class
 com\mycompany\jogomilhao\TelaDasMaterias$4.class
 com\mycompany\jogomilhao\TelaJogoCien$1.class
+com\mycompany\jogomilhao\TelaDeCadastro$1.class
 com\mycompany\jogomilhao\Persistencia\AlunoDAO.class
 com\mycompany\jogomilhao\TelaDasMaterias$6.class
 com\mycompany\jogomilhao\TelaDasMaterias$1.class
@@ -15,6 +17,7 @@ com\mycompany\jogomilhao\TelaJogoPort$1.class
 com\mycompany\jogomilhao\TelaJogoHist$1.class
 com\mycompany\jogomilhao\TelaDasMaterias$5.class
 com\mycompany\jogomilhao\TelaEditar.class
+com\mycompany\jogomilhao\TelaDeCadastro$2.class
 com\mycompany\jogomilhao\TelaEditar$1.class
 com\mycompany\jogomilhao\TelaJogoPort.class
 com\mycompany\jogomilhao\TelaJogoMat.class
@@ -22,6 +25,7 @@ com\mycompany\jogomilhao\TelaCadastro\Alunos.class
 com\mycompany\jogomilhao\TelaRanking$1.class
 com\mycompany\jogomilhao\JogoMilhaoTelaInicial$1.class
 com\mycompany\jogomilhao\TelaRanking.class
+com\mycompany\jogomilhao\TelaDeCadastro.class
 com\mycompany\jogomilhao\TelaJogoCien.class
 com\mycompany\jogomilhao\TelaJogoGeo$1.class
 com\mycompany\jogomilhao\TelaDasMaterias$3.class
