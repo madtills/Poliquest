@@ -1,0 +1,6 @@
+com\siqueira\programacao_banco_de_dados_poliquest\modelo\Principal.class
+com\siqueira\programacao_banco_de_dados_poliquest\modelo\Turma.class
+com\siqueira\programacao_banco_de_dados_poliquest\persistencia\ConnectionFactory.class
+com\siqueira\programacao_banco_de_dados_poliquest\Programacao_banco_de_dados_poliquest.class
+com\siqueira\programacao_banco_de_dados_poliquest\modelo\AlunoDAO.class
+com\siqueira\programacao_banco_de_dados_poliquest\modelo\Alunos.class
