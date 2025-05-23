@@ -21,6 +21,10 @@ public class Alunos {
         this.senha = senha;
     }
 
+    public Alunos(int i, String ra, String senha) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Getter for nome (Name)
     public String getNome() {
         return nome;

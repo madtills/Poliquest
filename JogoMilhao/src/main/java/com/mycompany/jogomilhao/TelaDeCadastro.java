@@ -1,6 +1,6 @@
 package com.mycompany.jogomilhao;
 
-import com.mycompany.jogomilhao.JogoMilhaoTelaInicial;
+import com.mycompany.jogomilhao.Telas.JogoMilhaoTelaInicial;
 import com.mycompany.jogomilhao.Persistencia.AlunoDAO;
 import com.mycompany.jogomilhao.TelaCadastro.Alunos;
 import javax.swing.JOptionPane;
@@ -86,8 +86,8 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     private void BotaoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoLoginActionPerformed
         // TODO add your handling code here:
          try{
-            var login = loginTextField.getText();
-            var senha = new String(senhaPasswordField.getText());
+            var ra = loginTextField.getText();
+            var senha = senhaPasswordField.getText();
             var usuario = new Alunos(0, ra, senha);
             var dao = new AlunoDAO();
             if(dao.existe(usuario)){
@@ -108,7 +108,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Tente novamente mais tarde.");
         }
-    }
+    
     }//GEN-LAST:event_BotaoLoginActionPerformed
 
     private void loginTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginTextFieldActionPerformed
@@ -158,3 +158,4 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     private javax.swing.JTextField senhaPasswordField;
     // End of variables declaration//GEN-END:variables
 
+}
