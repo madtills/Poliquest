@@ -1,0 +1,95 @@
+CREATE DATABASE showdomilhao;
+
+USE showdomilhao;
+
+CREATE TABLE professor(
+	id_professor INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id_professor)
+);
+
+CREATE TABLE turma(
+	id_turma INT NOT NULL AUTO_INCREMENT,
+    id_professor INT NOT NULL,
+    nome VARCHAR(255),
+    PRIMARY KEY (id_turma),
+    FOREIGN KEY (id_professor) REFERENCES professor(id_professor)
+    
+);
+
+CREATE TABLE aluno(
+	id_aluno INT NOT NULL AUTO_INCREMENT,
+    id_turma INT NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    ra VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id_aluno),
+    FOREIGN KEY (id_turma) REFERENCES turma(id_turma)
+);
+
+CREATE TABLE pontuacao(
+	pontuacao INT, 
+    id_aluno INT NOT NULL,
+    PRIMARY KEY (pontuacao),
+    FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno)
+);
+
+CREATE TABLE ranking(
+	id_posicao INT NOT NULL AUTO_INCREMENT,
+    id_aluno INT NOT NULL,
+    id_turma INT NOT NULL,
+    pontuacao INT,
+    PRIMARY KEY (id_posicao),
+    FOREIGN KEY (id_aluno) REFERENCES aluno(id_aluno),
+    FOREIGN KEY (id_turma) REFERENCES turma(id_turma),
+    FOREIGN KEY (pontuacao) REFERENCES pontuacao(pontuacao)
+);
+
+CREATE TABLE materia(
+	id_materia INT NOT NULL AUTO_INCREMENT,
+    id_professor INT NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id_materia), 
+    FOREIGN KEY (id_professor) REFERENCES professor(id_professor)
+);
+
+CREATE TABLE pergunta(
+	id_pergunta INT NOT NULL AUTO_INCREMENT,
+    id_materia INT NOT NULL,
+    enunciado VARCHAR(255) NOT NULL,
+    dificuldade VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id_pergunta),
+    FOREIGN KEY (id_materia) REFERENCES materia(id_materia)
+);
+
+CREATE TABLE resposta(
+	id_resposta INT NOT NULL AUTO_INCREMENT,
+    id_pergunta INT NOT NULL, 
+    id_materia INT NOT NULL,
+    texto VARCHAR(255) NOT NULL,
+    valor BOOLEAN NOT NULL,
+    -- valor seria se ela ta certa ou errado para a pergunta a qual ela se refere.
+    PRIMARY KEY (id_resposta),
+    FOREIGN KEY (id_pergunta) REFERENCES pergunta(id_pergunta),
+    FOREIGN KEY (id_materia) REFERENCES materia(id_materia)
+);
+
+CREATE TABLE pergunta_resposta(
+	id_pergunta INT NOT NULL,
+    id_resposta INT NOT NULL,
+    PRIMARY KEY (id_pergunta, id_resposta),
+    FOREIGN KEY (id_pergunta) REFERENCES pergunta(id_pergunta),
+	FOREIGN KEY (id_resposta) REFERENCES resposta(id_resposta) 
+);
+
+INSERT INTO professor (nome, email, senha) VALUES 
+('default', 'default@gmail.com', '12345');
+
+INSERT INTO turma (id_professor, nome) VALUES
+(1, '6A');
+
+-- SELECT * FROM aluno;
+-- DROP DATABASE showdomilhao;
