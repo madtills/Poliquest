@@ -4,9 +4,11 @@
  */
 package com.mycompany.jogomilhao.Telas;
 
+import com.mycompany.jogomilhao.ImagePanel;
 import com.mycompany.jogomilhao.Telas.TelaDasMaterias;
 import com.mycompany.jogomilhao.Telas.TelaEditar;
 import com.mycompany.jogomilhao.Telas.TelaRanking;
+import java.awt.BorderLayout;
 
 /**
  *
@@ -19,6 +21,14 @@ public class JogoMilhaoTelaInicial extends javax.swing.JFrame {
      */
     public JogoMilhaoTelaInicial() {
         initComponents();
+        ImagePanel imagePanel = new
+        ImagePanel(getClass().getResource("/Imagens/ImagemTelaInicial.png"));
+        this.setContentPane(imagePanel);
+        this.setLayout(new BorderLayout());
+        // Certifique-se de que todos os componentes são adicionados ao painel da imagem
+        imagePanel.add(jPanel1);
+        // Certifique-se de que a janela está corretamente dimensionada
+        this.pack();
     }
 
     /**
@@ -30,112 +40,100 @@ public class JogoMilhaoTelaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jButtonJogar1 = new javax.swing.JButton();
+        jButtonEditar1 = new javax.swing.JButton();
+        jButtonRanking1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setText("EDITAR");
-        jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setOpaque(false);
+
+        jButtonJogar1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButtonJogar1.setText("JOGAR");
+        jButtonJogar1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonJogar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonJogar1ActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton3.setText("RANKING");
-        jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEditar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonEditar1.setText("EDITAR");
+        jButtonEditar1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonEditar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonEditar1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial Unicode MS", 1, 48)); // NOI18N
-        jLabel1.setText("POLI-QUEST");
-
-        jLabel2.setFont(new java.awt.Font("Arial Unicode MS", 1, 36)); // NOI18N
-        jLabel2.setText("JODO DO MILHAO");
-        jLabel2.setToolTipText("");
-
-        jButton4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton4.setText("JOGAR");
-        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRanking1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonRanking1.setText("RANKING");
+        jButtonRanking1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButtonRanking1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButtonRanking1ActionPerformed(evt);
             }
         });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(194, 194, 194)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonJogar1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonRanking1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(581, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(jButtonJogar1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jButtonEditar1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(jButtonRanking1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(196, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 551, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(192, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        TelaEditar telaEditar = new TelaEditar();
-        telaEditar.setVisible(true);
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        TelaRanking telaRanking = new TelaRanking();
-        telaRanking.setVisible(true);
-
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+    private void jButtonJogar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJogar1ActionPerformed
         // TODO add your handling code here:
         TelaDasMaterias telaDasMaterias = new TelaDasMaterias();
         telaDasMaterias.setVisible(true);
         this.dispose();
+    }//GEN-LAST:event_jButtonJogar1ActionPerformed
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void jButtonEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditar1ActionPerformed
+        // TODO add your handling code here:
+        TelaEditar telaEditar = new TelaEditar();
+        telaEditar.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonEditar1ActionPerformed
+
+    private void jButtonRanking1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRanking1ActionPerformed
+        // TODO add your handling code here:
+        TelaRanking telaRanking = new TelaRanking();
+        telaRanking.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonRanking1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,10 +172,9 @@ public class JogoMilhaoTelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton jButtonEditar1;
+    private javax.swing.JButton jButtonJogar1;
+    private javax.swing.JButton jButtonRanking1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

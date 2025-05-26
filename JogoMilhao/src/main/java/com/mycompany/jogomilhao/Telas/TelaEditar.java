@@ -4,6 +4,9 @@
  */
 package com.mycompany.jogomilhao.Telas;
 
+import com.mycompany.jogomilhao.ImagePanel;
+import java.awt.BorderLayout;
+
 /**
  *
  * @author 25.00621-4
@@ -15,6 +18,14 @@ public class TelaEditar extends javax.swing.JFrame {
      */
     public TelaEditar() {
         initComponents();
+        ImagePanel imagePanel = new
+        ImagePanel(getClass().getResource("/imagens/TelaImagemEditar.png"));
+        this.setContentPane(imagePanel);
+        this.setLayout(new BorderLayout());
+        // Certifique-se de que todos os componentes são adicionados ao painel da imagem
+        imagePanel.add(jPanel1);
+        // Certifique-se de que a janela está corretamente dimensionada
+        this.pack();
     }
 
     /**
@@ -26,25 +37,104 @@ public class TelaEditar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelImagem = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jButtonDelPergunta = new javax.swing.JButton();
+        jButtonConfig = new javax.swing.JButton();
+        jButtonVoltar = new javax.swing.JButton();
+        jButtonConfirmar = new javax.swing.JButton();
+        jButtonAddPergunta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabelImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/imagens/TelaImagemEditar.png"))); // NOI18N
+        jPanel1.setOpaque(false);
+
+        jButtonDelPergunta.setText("Remover Pergunta");
+
+        jButtonConfig.setText("Configuraçoes Do Jogo");
+
+        jButtonVoltar.setText("Voltar");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
+
+        jButtonConfirmar.setText("Confirmar");
+        jButtonConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConfirmarActionPerformed(evt);
+            }
+        });
+
+        jButtonAddPergunta.setText("Adicionar Pergunta");
+        jButtonAddPergunta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddPerguntaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(181, Short.MAX_VALUE)
+                .addComponent(jButtonAddPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jButtonDelPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(jButtonConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(174, 174, 174))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(289, 289, 289)
+                .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71)
+                .addComponent(jButtonConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(184, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonDelPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAddPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(161, 161, 161))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelImagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelImagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonConfirmarActionPerformed
+
+    private void jButtonAddPerguntaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddPerguntaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAddPerguntaActionPerformed
+
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+        // TODO add your handling code here:
+        JogoMilhaoTelaInicial telaInicial = new JogoMilhaoTelaInicial();
+        telaInicial.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -82,6 +172,11 @@ public class TelaEditar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabelImagem;
+    private javax.swing.JButton jButtonAddPergunta;
+    private javax.swing.JButton jButtonConfig;
+    private javax.swing.JButton jButtonConfirmar;
+    private javax.swing.JButton jButtonDelPergunta;
+    private javax.swing.JButton jButtonVoltar;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
